@@ -10,7 +10,7 @@ function App() {
       return localStorageCart ? JSON.parse(localStorageCart) : [];
     }
 
-    const [data, setData] = useState(db);
+    const [data] = useState(db);
     const [cart, setCart] = useState(initialCart);
 
     const MAX_ITEMS = 10;
@@ -75,9 +75,9 @@ function App() {
 
     }
 
-    function saveLocalStorage(){
-      localStorage.setItem('cart',JSON.stringify(cart));
-    }
+    // function saveLocalStorage(){
+    //   localStorage.setItem('cart',JSON.stringify(cart));
+    // }
   return (
     <>
       <Header
